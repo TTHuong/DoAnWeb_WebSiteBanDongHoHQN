@@ -68,7 +68,14 @@ namespace doanweb.Controllers
             ViewBag.doanhthuthangA_id = (long)doanhthuthang;
             ViewBag.doanhthunamA_id = (long)doanhthunam;
             ViewBag.sodonchoduyetA_id = sodonchoduyet;
-            ViewBag.sodonchoduyetA_Ve_id = Convert.ToInt32((sodonchoduyet / Convert.ToDouble(tongso)) * 100);
+            if(tongso!=0)
+            {
+                ViewBag.sodonchoduyetA_Ve_id = Convert.ToInt32((sodonchoduyet / Convert.ToDouble(tongso)) * 100);
+            }
+            else
+            {
+                ViewBag.sodonchoduyetA_Ve_id = 0;
+            }
             ViewBag.sodonhangloiA_id = sodonhangloi;
 
             ////////////////////////////////////////////////////////////////////////////////////////////////
